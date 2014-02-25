@@ -15,7 +15,7 @@ CREATE TABLE 'compliment' (
 ) ;
 
 --
---Building data for table "compliment"
+--Building data for new table "compliment"
 --
 
 INSERT INTO abductions VALUES ('noun', 'adjective');
