@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+        <!-- insert the page content here -->
+
+        {% if getCompliment == True %}
+
+          <h1>You are {{rows['Adjective']}}!!</h1>
+
+         {% else %}
+
+          <form method="post" action="/compliment">
+              <input type="submit" value="Get a Compliment!" name="submit" size="40"/>
+          </form>
+        
+         {% endif %}
+          
+ 
+        
+{% endblock %}
