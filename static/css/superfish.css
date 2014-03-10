@@ -1,7 +1,7 @@
  
 .menu_block  {
 	position: relative;
-	background: url(../images/menu_bg.png) 0 0 repeat-x #89ab0c;
+	background: url(../img/menu_bg.png) 0 0 repeat-x #89ab0c;
 	border-bottom: 1px solid #7d9e0c;
 
 }
@@ -58,7 +58,7 @@ nav{ position:relative;padding: 0px 0 0 0;}
 	z-index: 999; 
 	padding-top: 1px;
 	padding-bottom: 1px;
-	background: url(../images/sub_bg.png) 0 bottom repeat-x #e0e36a;
+	background: url(../img/sub_bg.png) 0 bottom repeat-x #e0e36a;
 }
 
 .sf-menu li.sfHover>ul:after {
@@ -69,7 +69,7 @@ nav{ position:relative;padding: 0px 0 0 0;}
 	content: '';
 	position: absolute;
 	height: 3px;
-	background: url(../images/sub_after.png) 0 0 repeat-x;
+	background: url(../img/sub_after.png) 0 0 repeat-x;
 }
 .sf-menu li ul li{
 	text-align: left; 
@@ -91,7 +91,7 @@ nav{ position:relative;padding: 0px 0 0 0;}
 
 .sf-menu li ul li a.sf-with-ul span{
 	position: absolute;
-	background: url(../images/menu_arrow.png) 0 0 no-repeat;
+	background: url(../img/menu_arrow.png) 0 0 no-repeat;
 	right: -26px;
 	top: 8px;
 	display: block;
