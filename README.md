@@ -1,6 +1,6 @@
 compliment
 ==========
-Welcome to our CPSC 419 Compliment Generator!
+Welcome to our CPSC 350 Compliment Generator!
 This repository contains all the generated code necessary to get your own unique compliment
 generator up and running, complete with a full database of classified nouns and adjectives. 
 
