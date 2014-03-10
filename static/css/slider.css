@@ -1,5 +1,4 @@
 
-
 /*Slider*/
 .slider-relative {
 	position:relative;
@@ -39,7 +38,7 @@
 	font: italic bold 48px/36px 'Marvel', sans-serif;
 	color: #fff;	
 	width: 430px;
-	background: url(../images/banner_bg.png) 0 0 repeat;
+	background: url(../img/banner_bg.png) 0 0 repeat;
 }
 
 .slider .banner span {
@@ -92,7 +91,7 @@ z-index: 999;
 
 a.prev, a.next {
 	width: 16px;
-	background: url(../images/prevnext.png) 0 0 no-repeat;
+	background: url(../img/prevnext.png) 0 0 no-repeat;
 	height: 27px;
 	position: absolute;
 	display: block;
