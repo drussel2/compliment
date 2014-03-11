@@ -15,7 +15,9 @@ Potential files include:
 
 How to install/run the compliments generator
 
-1. clone the repository (git clone https://github.com/durssel2/compliment
+1. clone the repository (
+
+  a. Type command: git clone https://github.com/durssel2/compliment
 
 2. Go into the directory your flask files are in
 
