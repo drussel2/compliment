@@ -26,7 +26,7 @@ How to install/run the compliments generator
 6. Exit out of MySQL
   a. Type command: exit
 7. Go into the compliments directory, wherever you cloned the repository
-8. Start the serrver.py file
+8. Start the server.py file
   a. Type command: python server.py
 
 The website should then run!
