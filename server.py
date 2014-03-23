@@ -54,20 +54,12 @@ def login():
       currentUser = username
       
       pw = MySQLdb.escape_string(request.form['pw'])
-      query = "SELECT * from users WHERE username = '%s' AND password = SHA2('%s', 0)" % (username, pw)
+      query = "SELECT u.username, up.password FROM users u INNER JOIN user_passwords up ON u.id = up.id WHERE u.username = '%s' AND up.password = SHA2('%s', 0)" % (username, pw)
       print query
       cur.execute(query)
            
       if cur.fetchone():
-         session['username'] = currentUser         
-         qy = "SELECT * from users WHERE username = '%s' AND password = SHA2('%s', 0)" % (username, pw)
-         print qy
-         cur.execute(qy)
-         row = cur.fetchone()
-         
-         q = "SELECT * from users WHERE username = '%s'" % session['username']
-         print q
-         cur.execute(q)          
+         session['username'] = currentUser                  
          loggedIn=True
          return redirect(url_for('mainIndex'))
       else:
