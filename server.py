@@ -8,17 +8,17 @@ loggedIn = False
 
 @app.route('/')
 def mainIndex():
-    page = 'index'
+    page = 'Index'
     return render_template('index.html', page=page, loggedIn=loggedIn)
   
 @app.route('/about')
 def about():
-    page = 'about'
+    page = 'About'
     return render_template('about.html', page=page, loggedIn=loggedIn)
   
 @app.route('/compliment', methods=['GET', 'POST'])
 def compliment():
-  page = 'compliment'
+  page = 'Compliment'
   getCompliment = False
   
   
@@ -36,12 +36,12 @@ def compliment():
 
 @app.route('/blog')
 def blog():
-    page = 'blog'
+    page = 'Blog'
     return render_template('blog.html', page=page, loggedIn=loggedIn)
   
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    page = 'login'  
+    page = 'Login'  
   
     global currentUser
     global loggedIn
@@ -68,8 +68,35 @@ def login():
   
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    page = 'register'
+    page = 'Register'
+    global currentUser
+    global loggedIn
+    db = complimentutil.db_connect()
+    cur = db.cursor(cursorclass=MySQLdb.cursors.DictCursor)
+    # if user typed in a post ...
+    if request.method == 'POST':
+      print "HI"
+      username = MySQLdb.escape_string(request.form['username'])
+      currentUser = username
+      pw = MySQLdb.escape_string(request.form['pw'])
+      
+      query = "INSERT INTO users (username) VALUES ('%s')" % username
+      print query
+      cur.execute(query)
+      
+      qy = "INSERT INTO user_passwords (password) VALUES (SHA2('%s', 0))" % pw
+      print qy
+      cur.execute(qy)
+      
+      session['username'] = currentUser         
+      q = "SELECT * from users WHERE username = '%s'" % session['username']
+      print q
+      cur.execute(q)          
+      loggedIn=True
+      return redirect(url_for('mainIndex'))
+      
     return render_template('register.html', page=page, loggedIn=loggedIn)
+  
   
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
