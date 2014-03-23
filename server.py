@@ -26,11 +26,10 @@ def compliment():
     getCompliment = True
     db = complimentutil.db_connect()
     cur = db.cursor(cursorclass=MySQLdb.cursors.DictCursor)
-    randomnum = randint(1,50) #Inclusive
-    query = "SELECT Adjective FROM words WHERE ID = '%s'" %randomnum
+    query = "SELECT Adjective FROM words ORDER BY RAND()"
     cur.execute(query)   
     rows = cur.fetchone()
-    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, randomnum=randomnum, loggedIn=loggedIn)
+    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, loggedIn=loggedIn)
   return render_template('compliment.html', page=page, getCompliment=getCompliment, loggedIn=loggedIn)
 
 
