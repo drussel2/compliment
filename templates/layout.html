@@ -33,14 +33,14 @@
          {% if loggedIn == True %} 
         <div class="autor"><a href="/">Welcome {{session['username']}}</a><a href="/logout">Logout</a></div>
          {% else %}
-        <div class="autor"> <a href="/login">User Login</a></div>
+        <div class="autor"> <a href="/login">Login</a> <a href="/register">Register</a></div>
          {% endif %}
         <nav>
           <ul class="sf-menu">
              
-            <li {% if page == "index" %} class="current" {% endif %}><a href="/">Home</a></li>
-            <li {% if page == "about" %} class="current" {% endif %}><a href="/about">About</a></li>
-            <li {% if page == "compliment" %} class="current" {% endif %}><a href="/compliment">Get a Compliment</a></li>
+            <li {% if page == "Index" %} class="current" {% endif %}><a href="/">Home</a></li>
+            <li {% if page == "About" %} class="current" {% endif %}><a href="/about">About</a></li>
+            <li {% if page == "Compliment" %} class="current" {% endif %}><a href="/compliment">Get a Compliment</a></li>
           </ul>
         </nav>
         <div class="clear"></div>
