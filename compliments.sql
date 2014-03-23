@@ -63,6 +63,76 @@ INSERT INTO words (Adjective) VALUES ('excellent');
 INSERT INTO words (Adjective) VALUES ('agreeable');
 INSERT INTO words (Adjective) VALUES ('gorgeous');
 
+CREATE TABLE adverbs_vowels
+(
+  ID INT NOT NULL AUTO_INCREMENT,
+  Adverb VARCHAR(35),
+  PRIMARY KEY (ID)
+);
+
+INSERT INTO adverbs_vowels (Adverb) VALUES ('awesomely');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('amazingly');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('electrifyingly');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('exquisitely');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('ideally');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('impressively');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('one-hundred percent...ly');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('unreally');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('adorably');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('excellently');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('agreeably');
+
+CREATE TABLE adverbs_consonant
+(
+  ID INT NOT NULL AUTO_INCREMENT,
+  Adverb VARCHAR(35),
+  PRIMARY KEY (ID)
+);
+
+INSERT INTO adverbs_consonant (Adverb) VALUES ('beautifully');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('brilliantly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('charmingly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('dazzlingly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('delightfully');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('fabulously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('greatly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('handsomely');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('harmoniously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('joyously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('jubilantly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('keenly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('kindly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('legendarily');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('luminously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('marvelously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('meritoriously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('novelly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('perfectly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('phenomenally');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('incredibly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('smashingly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('refreshingly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('remarkably');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('satisfactorily');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('sparklingly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('terrifically');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('thrillingly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('vibrantly');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('virtuously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('wonderfully');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('wondrously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('gorgeously');
+INSERT INTO adverbs_consonant (Adverb) VALUES ('bodaciously');
+
+CREATE TABLE proper_grammar
+(
+  ID INT NOT NULL AUTO_INCREMENT,
+  Article VARCHAR(2),
+  PRIMARY KEY (ID)
+);
+
+INSERT INTO proper_grammar (Article) Values ('a');
+INSERT INTO proper_grammar (Article) Values ('an');
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
