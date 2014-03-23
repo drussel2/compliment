@@ -26,10 +26,26 @@ def compliment():
     getCompliment = True
     db = complimentutil.db_connect()
     cur = db.cursor(cursorclass=MySQLdb.cursors.DictCursor)
+    qe = "SELECT * FROM proper_grammar ORDER BY RAND()"
+    cur.execute(qe)
+    rowe = cur.fetchone()
+    
+    if rowe['Article'] == 'a':
+      qa = "SELECT * FROM adverbs_consonant ORDER BY RAND()"
+      cur.execute(qa)
+      adverb = cur.fetchone()
+      article = 'a'
+    else:
+      qa = "SELECT * FROM adverbs_vowels ORDER BY RAND()"
+      cur.execute(qa)
+      adverb = cur.fetchone()
+      article = 'an'
+    
+    
     query = "SELECT Adjective FROM words ORDER BY RAND()"
     cur.execute(query)   
     rows = cur.fetchone()
-    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, loggedIn=loggedIn)
+    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, loggedIn=loggedIn, adverb=adverb, article=article)
   return render_template('compliment.html', page=page, getCompliment=getCompliment, loggedIn=loggedIn)
 
 
