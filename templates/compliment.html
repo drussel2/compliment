@@ -7,7 +7,7 @@
 
         {% if getCompliment == True %}
 
-          <h1>You are {{rows['Adjective']}}!!</h1>
+          <h1>You are {{article}} {{adverb['Adverb']}} {{rows['Adjective']}} person!!</h1>
           <form method="post" action="/compliment">
               <input type="submit" value="One More?" name="submit" size="40"/>
           </form>
