@@ -63,6 +63,23 @@ INSERT INTO words (Adjective) VALUES ('excellent');
 INSERT INTO words (Adjective) VALUES ('agreeable');
 INSERT INTO words (Adjective) VALUES ('gorgeous');
 
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(12) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'raz', '2d7a56995013d429316fae93b3b7b7bf5eaab6e2fabe1f32fe25549cb676d0c2'),
+(2, 'ann', '057ba03d6c44104863dc7361fe4578965d1887360f90a0895882e58a6248fc86'),
+(3, 'lazy', '65e84be33532fb784c48129675f9eff3a682b27168c0ea744b2cf58ee02337c5');
+
 CREATE TABLE quotes
 (
   ID INT NOT NULL AUTO_INCREMENT,
@@ -76,4 +93,7 @@ INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('sometimes all you can do i
 INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('Happiness is when what you think, what you say','and what you do are in harmony -Mahatma Gandhi','slide1.jpg');
 INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('To do what you like is freedom','to like what you do is happiness -Ameya', 'slide2.jpg');
 INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('Be so happy that when others look at you','they become happy too. -Unknown','slide3.jpg');
+
+
+
 
