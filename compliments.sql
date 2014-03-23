@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(35) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5;
 
 --
 -- Dumping data for table `users`
@@ -83,7 +83,7 @@ INSERT INTO `users` (`id`,`username`) VALUES
 CREATE TABLE IF NOT EXISTS `user_passwords` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   password varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=5;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=5;
 
 
 INSERT INTO user_passwords (id, password) VALUES (1, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
