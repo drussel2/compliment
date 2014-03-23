@@ -82,7 +82,7 @@ $(window).load(
         {% if loggedIn == True %} 
         <div class="autor"><a href="/">Welcome {{session['username']}}</a><a href="/logout">Logout</a></div>
          {% else %}
-        <div class="autor"> <a href="/login">User Login</a></div>
+        <div class="autor"> <a href="/login">Login</a> <a href="/register">Register</a></div>
          {% endif %}
         <nav class="">
           <ul class="sf-menu">
@@ -102,7 +102,7 @@ $(window).load(
     <div class="slider"> <a href="#" class="prev"></a> <a href="#" class="next"></a>
       <ul class="items">
         <li> <img src="static/img/slide.jpg" alt="">
-          <div class="banner">somtimes all you can do is walk away,<br>
+          <div class="banner">Sometimes all you can do is walk away,<br>
             <br>
             hide your tears, and just pretend you're okay -Unknown</div>
         </li>
