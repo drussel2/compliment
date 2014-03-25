@@ -163,20 +163,4 @@ INSERT INTO user_passwords (id, password) VALUES (4, '5e884898da28047151d0e56f8d
 
 
 
-CREATE TABLE IF NOT EXISTS quotes
-(
-  ID INT NOT NULL AUTO_INCREMENT,
-  Phrases1 VARCHAR(50),
-  Phrases2 VARCHAR(50),
-  Pics VARCHAR(25),
-  PRIMARY KEY (ID)
-);
-
-INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('sometimes all you can do is walk away,','hide your tears, and just pretend you\'re okay -Unknown','slide.jpg');
-INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('Happiness is when what you think, what you say','and what you do are in harmony -Mahatma Gandhi','slide1.jpg');
-INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('To do what you like is freedom','to like what you do is happiness -Ameya', 'slide2.jpg');
-INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('Be so happy that when others look at you','they become happy too. -Unknown','slide3.jpg');
-
-
-
 
