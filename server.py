@@ -20,6 +20,8 @@ def about():
 def compliment():
   page = 'Compliment'
   getCompliment = False
+  
+  
   if request.method == 'POST':
     getCompliment = True
     db = complimentutil.db_connect()
@@ -38,14 +40,15 @@ def compliment():
       cur.execute(qa)
       adverb = cur.fetchone()
       article = 'an'
-    
+      
     if 'partypooper' in request.form:
-      query = "SELECT Adjective FROM words WHERE adjective = (SELECT adjective FROM words WHERE sarVal = 'T')" 
+      query = "SELECT Adjective FROM words WHERE Adjective = (SELECT Adjective FROM words WHERE sarVal = 'T' ORDER BY RAND() LIMIT 1)"
     else:
-      query = "SELECT Adjective FROM words ORDER BY RAND()"
+      query = "SELECT Adjective FROM words WHERE Adjective = (SELECT Adjective FROM words WHERE sarVal = 'F' ORDER BY RAND() LIMIT 1)"
     cur.execute(query)
     rows = cur.fetchone()
-    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, loggedIn=loggedIn)
+    print(rows)
+    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, loggedIn=loggedIn, adverb=adverb, article=article)
   return render_template('compliment.html', page=page, getCompliment=getCompliment, loggedIn=loggedIn)
 
 
@@ -74,7 +77,6 @@ def login():
       cur.execute(query)
            
       if cur.fetchone():
-         global currentUser
          session['username'] = currentUser                  
          loggedIn=True
          return redirect(url_for('mainIndex'))
