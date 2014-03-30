@@ -9,58 +9,59 @@ CREATE TABLE words
 (
   ID INT NOT NULL AUTO_INCREMENT,
   Adjective VARCHAR(35),
+  sarVal CHAR(1),
   PRIMARY KEY (ID)
 );
 
-INSERT INTO words (Adjective) VALUES ('awesome');
-INSERT INTO words (Adjective) VALUES ('amazing');
-INSERT INTO words (Adjective) VALUES ('beautiful');
-INSERT INTO words (Adjective) VALUES ('brilliant');
-INSERT INTO words (Adjective) VALUES ('charming');
-INSERT INTO words (Adjective) VALUES ('cool');
-INSERT INTO words (Adjective) VALUES ('dazzling');
-INSERT INTO words (Adjective) VALUES ('delightful');
-INSERT INTO words (Adjective) VALUES ('electrifying');
-INSERT INTO words (Adjective) VALUES ('exquisite');
-INSERT INTO words (Adjective) VALUES ('fabulous');
-INSERT INTO words (Adjective) VALUES ('fun');
-INSERT INTO words (Adjective) VALUES ('good');
-INSERT INTO words (Adjective) VALUES ('great');
-INSERT INTO words (Adjective) VALUES ('handsome');
-INSERT INTO words (Adjective) VALUES ('harmonious');
-INSERT INTO words (Adjective) VALUES ('ideal');
-INSERT INTO words (Adjective) VALUES ('impressive');
-INSERT INTO words (Adjective) VALUES ('joyous');
-INSERT INTO words (Adjective) VALUES ('jubilant');
-INSERT INTO words (Adjective) VALUES ('keen');
-INSERT INTO words (Adjective) VALUES ('kind');
-INSERT INTO words (Adjective) VALUES ('legendary');
-INSERT INTO words (Adjective) VALUES ('luminous');
-INSERT INTO words (Adjective) VALUES ('marvelous');
-INSERT INTO words (Adjective) VALUES ('meritorious');
-INSERT INTO words (Adjective) VALUES ('nice');
-INSERT INTO words (Adjective) VALUES ('novel');
-INSERT INTO words (Adjective) VALUES ('okay');
-INSERT INTO words (Adjective) VALUES ('perfect');
-INSERT INTO words (Adjective) VALUES ('phenomenal');
-INSERT INTO words (Adjective) VALUES ('incredible');
-INSERT INTO words (Adjective) VALUES ('smashing');
-INSERT INTO words (Adjective) VALUES ('refreshing');
-INSERT INTO words (Adjective) VALUES ('remarkable');
-INSERT INTO words (Adjective) VALUES ('satisfactory');
-INSERT INTO words (Adjective) VALUES ('sparkling');
-INSERT INTO words (Adjective) VALUES ('terrific');
-INSERT INTO words (Adjective) VALUES ('thrilling');
-INSERT INTO words (Adjective) VALUES ('unreal');
-INSERT INTO words (Adjective) VALUES ('upbeat');
-INSERT INTO words (Adjective) VALUES ('vibrant');
-INSERT INTO words (Adjective) VALUES ('virtuous');
-INSERT INTO words (Adjective) VALUES ('wonderful');
-INSERT INTO words (Adjective) VALUES ('wondrous');
-INSERT INTO words (Adjective) VALUES ('adorable');
-INSERT INTO words (Adjective) VALUES ('excellent');
-INSERT INTO words (Adjective) VALUES ('agreeable');
-INSERT INTO words (Adjective) VALUES ('gorgeous');
+INSERT INTO words (Adjective) VALUES ('awesome', 'T');
+INSERT INTO words (Adjective) VALUES ('amazing', 'T');
+INSERT INTO words (Adjective) VALUES ('beautiful', 'T');
+INSERT INTO words (Adjective) VALUES ('brilliant', 'T');
+INSERT INTO words (Adjective) VALUES ('charming', 'T');
+INSERT INTO words (Adjective) VALUES ('cool', 'T');
+INSERT INTO words (Adjective) VALUES ('dazzling', 'T');
+INSERT INTO words (Adjective) VALUES ('delightful', 'T');
+INSERT INTO words (Adjective) VALUES ('electrifying', 'T');
+INSERT INTO words (Adjective) VALUES ('exquisite', 'T');
+INSERT INTO words (Adjective) VALUES ('fabulous', 'T');
+INSERT INTO words (Adjective) VALUES ('fun', 'T');
+INSERT INTO words (Adjective) VALUES ('good', 'T');
+INSERT INTO words (Adjective) VALUES ('great', 'T');
+INSERT INTO words (Adjective) VALUES ('handsome', 'T');
+INSERT INTO words (Adjective) VALUES ('harmonious', 'T');
+INSERT INTO words (Adjective) VALUES ('ideal', 'T');
+INSERT INTO words (Adjective) VALUES ('impressive', 'T');
+INSERT INTO words (Adjective) VALUES ('joyous', 'T');
+INSERT INTO words (Adjective) VALUES ('jubilant', 'T');
+INSERT INTO words (Adjective) VALUES ('keen', 'T');
+INSERT INTO words (Adjective) VALUES ('kind', 'T');
+INSERT INTO words (Adjective) VALUES ('legendary', 'T');
+INSERT INTO words (Adjective) VALUES ('luminous', 'T');
+INSERT INTO words (Adjective) VALUES ('marvelous', 'T');
+INSERT INTO words (Adjective) VALUES ('meritorious', 'T');
+INSERT INTO words (Adjective) VALUES ('nice', 'T');
+INSERT INTO words (Adjective) VALUES ('novel', 'T');
+INSERT INTO words (Adjective) VALUES ('okay', 'T');
+INSERT INTO words (Adjective) VALUES ('perfect', 'T');
+INSERT INTO words (Adjective) VALUES ('phenomenal', 'T');
+INSERT INTO words (Adjective) VALUES ('incredible', 'T');
+INSERT INTO words (Adjective) VALUES ('smashing', 'T');
+INSERT INTO words (Adjective) VALUES ('refreshing', 'T');
+INSERT INTO words (Adjective) VALUES ('remarkable', 'T');
+INSERT INTO words (Adjective) VALUES ('satisfactory', 'T');
+INSERT INTO words (Adjective) VALUES ('sparkling', 'T');
+INSERT INTO words (Adjective) VALUES ('terrific', 'T');
+INSERT INTO words (Adjective) VALUES ('thrilling', 'T');
+INSERT INTO words (Adjective) VALUES ('unreal', 'T');
+INSERT INTO words (Adjective) VALUES ('upbeat', 'T');
+INSERT INTO words (Adjective) VALUES ('vibrant', 'T');
+INSERT INTO words (Adjective) VALUES ('virtuous', 'T');
+INSERT INTO words (Adjective) VALUES ('wonderful', 'T');
+INSERT INTO words (Adjective) VALUES ('wondrous', 'T');
+INSERT INTO words (Adjective) VALUES ('adorable', 'T');
+INSERT INTO words (Adjective) VALUES ('excellent', 'T');
+INSERT INTO words (Adjective) VALUES ('agreeable', 'T');
+INSERT INTO words (Adjective) VALUES ('gorgeous', 'T');
 
 CREATE TABLE adverbs_vowels
 (
@@ -78,6 +79,8 @@ INSERT INTO adverbs_vowels (Adverb) VALUES ('impressively');
 INSERT INTO adverbs_vowels (Adverb) VALUES ('adorably');
 INSERT INTO adverbs_vowels (Adverb) VALUES ('excellently');
 INSERT INTO adverbs_vowels (Adverb) VALUES ('agreeably');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('unbelievably');
+INSERT INTO adverbs_vowels (Adverb) VALUES ('extremely');
 
 CREATE TABLE adverbs_consonant
 (
@@ -157,6 +160,22 @@ INSERT INTO user_passwords (id, password) VALUES (1, '5e884898da28047151d0e56f8d
 INSERT INTO user_passwords (id, password) VALUES (2,'5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
 INSERT INTO user_passwords (id, password) VALUES (3, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
 INSERT INTO user_passwords (id, password) VALUES (4, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
+
+
+
+CREATE TABLE IF NOT EXISTS quotes
+(
+  ID INT NOT NULL AUTO_INCREMENT,
+  Phrases1 VARCHAR(50),
+  Phrases2 VARCHAR(50),
+  Pics VARCHAR(25),
+  PRIMARY KEY (ID)
+);
+
+INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('sometimes all you can do is walk away,','hide your tears, and just pretend you\'re okay -Unknown','slide.jpg');
+INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('Happiness is when what you think, what you say','and what you do are in harmony -Mahatma Gandhi','slide1.jpg');
+INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('To do what you like is freedom','to like what you do is happiness -Ameya', 'slide2.jpg');
+INSERT INTO quotes(Phrases1, Phrases2, Pics) VALUES ('Be so happy that when others look at you','they become happy too. -Unknown','slide3.jpg');
 
 
 
