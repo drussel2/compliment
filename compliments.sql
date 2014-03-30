@@ -62,7 +62,7 @@ INSERT INTO words (Adjective) VALUES ('adorable', 'T');
 INSERT INTO words (Adjective) VALUES ('excellent', 'T');
 INSERT INTO words (Adjective) VALUES ('agreeable', 'T');
 INSERT INTO words (Adjective) VALUES ('gorgeous', 'T');
-INSERT INTO words (Adjective) VALUES ('gorgeous', 'F');
+INSERT INTO words (Adjective) VALUES ('splendiferous', 'F');
 
 CREATE TABLE adverbs_vowels
 (
