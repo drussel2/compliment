@@ -10,12 +10,14 @@
           <h1>You are {{article}} {{adverb['Adverb']}} {{rows['Adjective']}} person!!</h1>
           <form method="post" action="/compliment">
               <input type="submit" value="One More?" name="submit" size="40"/>
+              <input type="checkbox" name="partypooper" value="unCool">I don't like compliments!<br>
           </form>
 
          {% else %}
 
           <form method="post" action="/compliment">
               <input type="submit" value="Get a Compliment!" name="submit" size="40"/>
+              <input type="checkbox" name="partypooper" value="unCool">I don't like compliments!<br>
           </form>
         
          {% endif %}
