@@ -20,7 +20,9 @@ def about():
 def compliment():
   page = 'Compliment'
   getCompliment = False
-  
+  intensity = request.form['intensity']
+  HAPPY = False
+  print intensity
   
   if request.method == 'POST':
     getCompliment = True
@@ -31,24 +33,27 @@ def compliment():
     rowe = cur.fetchone()
     
     if rowe['Article'] == 'a':
-      qa = "SELECT * FROM adverbs_consonant ORDER BY RAND()"
+      qa = "SELECT * FROM adverbs_consonant WHERE Intensity = '%s' ORDER BY RAND()" % intensity
       cur.execute(qa)
       adverb = cur.fetchone()
       article = 'a'
     else:
-      qa = "SELECT * FROM adverbs_vowels ORDER BY RAND()"
+      qa = "SELECT * FROM adverbs_vowels WHERE Intensity = '%s' ORDER BY RAND()" % intensity
       cur.execute(qa)
       adverb = cur.fetchone()
       article = 'an'
       
     if 'partypooper' in request.form:
-      query = "SELECT Adjective FROM words WHERE Adjective = (SELECT Adjective FROM words WHERE sarVal = 'T' ORDER BY RAND() LIMIT 1)"
+      #query = "SELECT Adjective FROM words WHERE Adjective = (SELECT Adjective FROM words WHERE sarVal = 'T' ORDER BY RAND() LIMIT 1)"
+      query = "SELECT Adjective FROM words WHERE sarVal = 'T' ORDER BY RAND() LIMIT 1"
+      HAPPY = True
     else:
-      query = "SELECT Adjective FROM words WHERE Adjective = (SELECT Adjective FROM words WHERE sarVal = 'F' ORDER BY RAND() LIMIT 1)"
+      #query = "SELECT Adjective FROM words WHERE Adjective = (SELECT Adjective FROM words WHERE sarVal = 'F' ORDER BY RAND() LIMIT 1)"
+      query = "SELECT Adjective FROM words WHERE sarVal = 'F' ORDER BY RAND() LIMIT 1"
     cur.execute(query)
     rows = cur.fetchone()
     print(rows)
-    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, loggedIn=loggedIn, adverb=adverb, article=article)
+    return render_template('compliment.html', page=page, getCompliment=getCompliment, rows=rows, loggedIn=loggedIn, adverb=adverb, article=article, intensity=intensity, HAPPY=HAPPY)
   return render_template('compliment.html', page=page, getCompliment=getCompliment, loggedIn=loggedIn)
 
 
