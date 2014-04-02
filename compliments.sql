@@ -81,7 +81,7 @@ CREATE TABLE adverbs_vowels
   PRIMARY KEY (ID)
 );
 
-CREATE INDEX intensity ON adverbs_vowels (Adverb, Intensity);
+CREATE INDEX intensityIndex ON adverbs_vowels (Adverb, Intensity);
 
 INSERT INTO adverbs_vowels (Adverb, Intensity) VALUES ('awesomely', 1);
 INSERT INTO adverbs_vowels (Adverb, Intensity) VALUES ('amazingly', 1);
@@ -103,7 +103,7 @@ CREATE TABLE adverbs_consonant
   PRIMARY KEY (ID)
 );
 
-CREATE INDEX intensity ON adverbs_consonant (Adverb, Intensity);
+CREATE INDEX intensityIndex ON adverbs_consonant (Adverb, Intensity);
 
 INSERT INTO adverbs_consonant (Adverb, Intensity) VALUES ('beautifully', 3);
 INSERT INTO adverbs_consonant (Adverb, Intensity) VALUES ('brilliantly', 3);
