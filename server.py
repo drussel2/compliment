@@ -20,11 +20,12 @@ def about():
 def compliment():
   page = 'Compliment'
   getCompliment = False
-  intensity = request.form['intensity']
+  intensity = 0
   HAPPY = False
   print intensity
   
   if request.method == 'POST':
+    intensity = request.form['intensity']
     getCompliment = True
     db = complimentutil.db_connect()
     cur = db.cursor(cursorclass=MySQLdb.cursors.DictCursor)
